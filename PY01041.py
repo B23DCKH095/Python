@@ -1,19 +1,13 @@
-def tang(n):
-    for i in range(len(n)-1):
-        if(n[i] >= n[i+1]): return False
-    return True
-def giam(n):
-    for i in range(len(n)-1):
-        if(n[i] <= n[i+1]): return False
-    return True
-def chat(n):
-    for i in range(len(n)-1):
-        if(n[i] == n[i+1]): return True
-    return False
+
 for test in range(int(input())):
     n = input()
     ok = 1
-    if(len(n) < 3): ok = 0
-    if (tang(n) or giam(n) or chat(n)): ok = 0
-    if(ok == 1):print('YES')
-    else: print('NO')
+    if(len(n) < 3):
+        print("NO");
+        continue
+    l = 1
+    while(l < len(n) and int(n[l]) > int(n[l-1])): l += 1
+    r = len(n)-2
+    while(r >= 0 and int(n[r]) > int(n[r+1])): r -= 1
+    if(l-r == 2):print("YES")
+    else: print("NO")
