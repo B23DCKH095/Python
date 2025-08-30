@@ -1,12 +1,8 @@
-def check(i):
-    s = ord(i) - ord('0')
-    return (s >= 0 and s <= 2)
 for _ in range(int(input())):
-    n = input()
-    ok = 1
-    for i in n:
-        if(not check(i)):
-            ok = 0
-            break
-    if(ok==1): print('YES')
-    else: print('NO')
+    s = input()
+    ok = True
+    for i in s:
+        if not (i == '1' or i == '2' or i == '0'):
+            ok = False
+    if(ok): print("YES")
+    else: print("NO")
