@@ -1,6 +1,6 @@
-t = int(input());
+t = 123451
 while(t > 0):
-    t-=1;
-    s = input();
-    if(s[0] == s[-1]): print("YES");
-    else: print("NO");
+    t-=1
+    s = input()
+    if(s[0] == s[-1]): print("YES")
+    else: print("NO")
